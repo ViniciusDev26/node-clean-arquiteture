@@ -5,6 +5,8 @@
   "author": "Carlos Vinicius <vinicius26092000@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "git-commit-msg-linter": "^3.2.8"
+    "@types/node": "^16.7.10",
+    "git-commit-msg-linter": "^3.2.8",
+    "typescript": "^4.4.2"
   }
 }
