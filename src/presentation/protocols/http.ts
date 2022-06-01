@@ -6,3 +6,7 @@ export interface HttpResponse {
 export interface HttpRequest {
   body?: any
 }
+
+export interface Controller {
+  handle: (httpRequest: HttpRequest) => HttpResponse
+}

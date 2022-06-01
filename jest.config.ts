@@ -5,5 +5,10 @@ export default {
   collectCoverageFrom: ['<rootDir>/src/**/*.ts'],
   coverageDirectory: 'coverage',
   testEnvironment: 'node',
-  preset: 'ts-jest'
+  preset: 'ts-jest',
+  globals: {
+    'ts-jest': {
+      isolatedModules: true
+    }
+  }
 }
