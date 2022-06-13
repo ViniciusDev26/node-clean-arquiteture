@@ -1,4 +1,4 @@
-import { Encryptor } from '../../protocols/encryptor'
+import { Encryptor } from './db-add-account-protocols'
 import { DbAddAccount } from './db-add-account'
 
 const makeEncryptor = (): Encryptor => {
