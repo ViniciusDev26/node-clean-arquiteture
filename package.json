@@ -5,6 +5,7 @@
   "author": "Carlos Vinicius <vinicius26092000@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
     "@types/jest": "^27.0.1",
     "@types/node": "^16.7.10",
     "@types/validator": "^13.7.3",
@@ -32,6 +33,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "validator": "^13.7.0"
   }
 }
