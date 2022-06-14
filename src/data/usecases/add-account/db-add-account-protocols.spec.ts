@@ -1,6 +1,6 @@
-import * as protocols from './index'
+import * as protocols from './db-add-account-protocols'
 
-describe('Protocols', () => {
+describe('DbAddAccountProtocols', () => {
   it('should have exports', () => {
     expect(typeof protocols).toBe('object')
   })

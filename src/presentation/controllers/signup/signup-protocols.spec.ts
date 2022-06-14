@@ -1,6 +1,6 @@
-import * as protocols from './index'
+import * as protocols from './signup-protocols'
 
-describe('Protocols', () => {
+describe('SignUpProtocols', () => {
   it('should have exports', () => {
     expect(typeof protocols).toBe('object')
   })
