@@ -3,7 +3,7 @@ import { Encryptor } from '../../data/protocols/encryptor'
 
 export class BcryptAdapter implements Encryptor {
   constructor (
-    private readonly salt: number = 12
+    private readonly salt: number
   ) {}
 
   async encrypt (value: string): Promise<string> {
