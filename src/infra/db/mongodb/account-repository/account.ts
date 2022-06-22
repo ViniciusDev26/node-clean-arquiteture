@@ -10,8 +10,6 @@ export class AccountMongoRepository implements AddAccountRepository {
     const { insertedId } = await accountConnection.insertOne(accountData)
     const result = await accountConnection.findOne(insertedId)
 
-    if (!result) return {} as unknown as AccountModel
-
     return MongoHelper.map(result)
   }
 }
