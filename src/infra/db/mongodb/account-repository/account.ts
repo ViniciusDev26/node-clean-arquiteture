@@ -1,7 +1,7 @@
-import { AddAccountRepository } from '../../../data/protocols/add-account-repository'
-import { AccountModel } from '../../../domain/models/account'
-import { AddAccountModel } from '../../../domain/usecases/add-account'
-import { MongoHelper } from '../../helpers/mongo-helper'
+import { AddAccountRepository } from '../../../../data/protocols/add-account-repository'
+import { AccountModel } from '../../../../domain/models/account'
+import { AddAccountModel } from '../../../../domain/usecases/add-account'
+import { MongoHelper } from '../../../helpers/mongo-helper'
 
 export class AccountMongoRepository implements AddAccountRepository {
   async add (accountData: AddAccountModel): Promise<AccountModel> {
@@ -12,8 +12,6 @@ export class AccountMongoRepository implements AddAccountRepository {
 
     if (!result) return {} as unknown as AccountModel
 
-    const { _id: id, ...account } = result
-
-    return Object.assign({}, account, { id: id.toHexString() }) as AccountModel
+    return MongoHelper.map(result)
   }
 }
